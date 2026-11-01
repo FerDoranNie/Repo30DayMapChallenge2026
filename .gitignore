@@ -1,0 +1,55 @@
+# Ignorar archivos de datos espaciales pesados y temporales
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+outputs/high_res/*
+!outputs/high_res/.gitkeep
+!outputs/gallery/.gitkeep
+
+# Archivos geoespaciales grandes (salvo los que se fuercen explícitamente)
+*.shp
+*.shx
+*.dbf
+*.prj
+*.gpkg
+*.tif
+*.tiff
+*.nc
+*.hdf
+*.laz
+*.las
+*.gdb/
+*.mbtiles
+*.pmtiles
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# QGIS / ArcGIS
+*.qgs~
+*.qgz~
+*.aux.xml
+*.ovr
+*.cpg
+*.sbn
+*.sbx
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
