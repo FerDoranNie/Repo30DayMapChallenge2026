@@ -92,6 +92,12 @@ Repo30DayMapChallenge2026/
 #### CONSTELACIONES" DEL ENDEMISMO AVIAR EN MÉXICO
 ![Día 1](outputs\gallery\day01_points_aves_endemicas.png)
 
+### Día 2
+#### Veracruz Río de Rapaces
+![Día 2](outputs\gallery\day03_polygons_anp_presion.png)
+
+
+
 ---
 
 ## 👤 Autor
