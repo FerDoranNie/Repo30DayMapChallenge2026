@@ -96,7 +96,9 @@ Repo30DayMapChallenge2026/
 #### Veracruz Río de Rapaces
 ![Día 2](outputs\gallery\day03_polygons_anp_presion.png)
 
-
+### Día 3 
+#### Estado actual de las áreas protegidas de México
+![Día 3](outputs\gallery\day03_polygons_anp_presion.png)
 
 ---
 
