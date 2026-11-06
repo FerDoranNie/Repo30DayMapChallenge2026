@@ -11,19 +11,42 @@ Esta guía contiene la secuencia ordenada de comandos `git` y mensajes de commit
 Si quieres hacer tu primer `push` hoy subiendo **únicamente la estructura base del proyecto** (sin incluir todavía los scripts `.R`/`.py` ni las imágenes de `outputs/gallery/` de los días que ya adelantamos):
 
 ```powershell
-# 1. Agregar archivos de configuración, utilidades y estructura base
-git add .gitignore AGENTS.md COMMITS_GUIDE.md utils/ data/raw/.gitkeep data/processed/.gitkeep outputs/gallery/.gitkeep outputs/high_res/.gitkeep
+# 1. Agregar README.md (solo texto, sin imágenes aún), configuración, utilidades y estructura base
+git add README.md .gitignore AGENTS.md COMMITS_GUIDE.md utils/ data/raw/.gitkeep data/processed/.gitkeep outputs/gallery/.gitkeep outputs/high_res/.gitkeep
 
-# 2. Agregar las carpetas de los días del 03 al 30 (que solo tienen su README.md base)
-git add days/day03_* days/day04_* days/day05_* days/day06_* days/day07_* days/day08_* days/day09_* days/day10_* days/day11_* days/day12_* days/day13_* days/day14_* days/day15_* days/day16_* days/day17_* days/day18_* days/day19_* days/day20_* days/day21_* days/day22_* days/day23_* days/day24_* days/day25_* days/day26_* days/day27_* days/day28_* days/day29_* days/day30_*
+# 2. Agregar las carpetas de los días que aún solo tienen su README.md base
+git add days/day06_* days/day07_* days/day08_* days/day09_* days/day10_* days/day11_* days/day12_* days/day13_* days/day14_* days/day15_* days/day16_* days/day17_* days/day18_* days/day19_* days/day20_* days/day21_* days/day22_* days/day23_* days/day24_* days/day25_* days/day26_* days/day27_* days/day28_* days/day29_* days/day30_*
 
 # 3. Crear el commit inicial de arquitectura
-git commit -m "chore: initialize Repo30DayMapChallenge2026 structure, base themes, and 30-day calendar"
+git commit -m ":bird: :parrot: Iniciando el repositorio Repo30DayMapChallenge2026, estructura, temas y calendario"
 
 # 4. Conectar con tu repositorio remoto en GitHub y subir
 # git branch -M main
 # git remote add origin https://github.com/FerDoranNie/Repo30DayMapChallenge2026.git
 # git push -u origin main
+```
+
+---
+
+## 🖼️ Bloques de Imágenes para ir agregando día a día en `README.md`
+
+Cuando vayas a publicar cada día, cambia su estado de `⏳ Pendiente` a `✅ Completado` en la tabla de `README.md` y pega su bloque debajo de `## 🖼️ Galería de Mapas`:
+
+```markdown
+### Día 01 — Points: Constelaciones del Endemismo Alado en México
+[![Día 01 - Points](./outputs/gallery/day01_points_aves_endemicas.png)](./days/day01_points/day01_aves_endemicas.R)
+
+### Día 02 — Lines: Autopistas del Cielo (Veracruz y el Embudo Migratorio de América)
+[![Día 02 - Lines](./outputs/gallery/day02_lines_veracruz_rio_rapaces.png)](./days/day02_lines/day02_rutas_rapaces.py)
+
+### Día 03 — Polygons: El Escudo Verde de México (ANP y presión antrópica)
+[![Día 03 - Polygons](./outputs/gallery/day03_polygons_anp_presion.png)](./days/day03_polygons/day03_anp_presion.R)
+
+### Día 04 — Clusters: Clústeres de la Megadiversidad
+[![Día 04 - Clusters](./outputs/gallery/day04_clusters_megadiversidad.png)](./days/day04_clusters/)
+
+### Día 05 — Senses: Sight: Ecología del Plumaje e Iridiscencia Aviar en México
+[![Día 05 - Senses: Sight](./outputs/gallery/day05_senses_sight_plumaje.png)](./days/day05_senses_sight/)
 ```
 
 ---
@@ -35,35 +58,35 @@ Conforme vayas publicando cada día del reto, ejecuta el bloque correspondiente:
 ### Día 01 — Points (01 de noviembre)
 ```powershell
 git add days/day01_points/ outputs/gallery/day01_points_aves_endemicas.png README.md
-git commit -m "feat(day01): add Day 01 Points map - Constellations of Endemic Birds in Mexico"
+git commit -m "Añadiendo Día 1 Mapa de puntos - Constelación de endemismos aviares en México"
 git push
 ```
 
 ### Día 02 — Lines (02 de noviembre)
 ```powershell
 git add days/day02_lines/ outputs/gallery/day02_lines_veracruz_rio_rapaces.png README.md
-git commit -m "feat(day02): add Day 02 Lines map - Veracruz River of Raptors hemispheric migration"
+git commit -m "Añadiendo Día 2 Mapa de lineas - Veracruz Río de Rapaces"
 git push
 ```
 
 ### Día 03 — Polygons (03 de noviembre)
 ```powershell
-git add days/day03_polygons/ outputs/gallery/day03_polygons_escudo_verde_anp.png README.md
-git commit -m "feat(day03): add Day 03 Polygons map - Mexico's Protected Areas (ANP) and Ecoregions"
+git add days/day03_polygons/ outputs/gallery/day03_polygons_anp_presion.png README.md
+git commit -m "Añadiendo Día 3 Estado actual de las áreas protegidas de México"
 git push
 ```
 
 ### Día 04 — Clusters (04 de noviembre)
 ```powershell
-git add days/day04_clusters/ outputs/gallery/day04_clusters_megadiverse_hotspots.png README.md
-git commit -m "feat(day04): add Day 04 Clusters map - Most biodiverse zones within megadiverse countries"
+git add days/day04_clusters/ outputs/gallery/day04_clusters_megadiversidad.png README.md
+git commit -m "Añadiendo Día 4 ¿Dónde se concentra la diversidad en los países megadiversos?"
 git push
 ```
 
 ### Día 05 — Senses: Sight (05 de noviembre)
 ```powershell
-git add days/day05_senses_sight/ outputs/gallery/day05_sight_plumaje_aves.png README.md
-git commit -m "feat(day05): add Day 05 Senses: Sight map - Avian plumage color richness and iridescence"
+git add days/day05_senses_sight/ outputs/gallery/day05_senses_sight_plumaje.png README.md
+git commit -m "Añadiendo Día 5 ¿Se puede mapear la iridiscencia de las aves?"
 git push
 ```
 

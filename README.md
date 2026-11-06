@@ -31,12 +31,12 @@ En esta edición los 30 mapas giran alrededor de cuatro grandes líneas de inves
 
 | Día | Fecha | Tema Oficial | Eje Temático | Mapa / Proyecto | Herramientas | Código | Estado |
 | :---: | :---: | :--- | :--- | :--- | :--- | :---: | :---: |
-| **01** | 01 Nov | **Points** | 🦜 Aves | Endemismo alado en México (~110 especies endémicas) | R (`sf`, `ggplot2`) | [`day01`](./days/day01_points/) | ⏳ Pendiente |
-| **02** | 02 Nov | **Lines** | 🦜 Aves | Autopistas del cielo: Veracruz Río de Rapaces y el embudo migratorio de América | Python (`pandas`, `shapely`, `scipy`, `matplotlib`) | [`day02`](./days/day02_lines/) | ⏳ Pendiente |
-| **03** | 03 Nov | **Polygons** | 🇲🇽 México | El escudo verde de México: 223 ANP y presión antrópica | R (`sf`, `terra`, `ggplot2`) | [`day03`](./days/day03_polygons/) | ⏳ Pendiente |
-| **04** | 04 Nov | **Clusters** | 🌍 Bio/Amb | Clústeres de la megadiversidad: la zona más biodiversa de los 17 países más biodiversos | R (`sf`, `ggplot2`, `patchwork`, `cluster`) + GBIF API | [`day04`](./days/day04_clusters/) | ⏳ Pendiente |
-| **05** | 05 Nov | **Senses: Sight** | 🦜 Aves | Ecología del plumaje: Riqueza cromática e iridiscencia aviar en México | R (`terra`, `sf`, `ggplot2`, `patchwork`) + GBIF & BirdColorBase | [`day05`](./days/day05_senses_sight/) | ⏳ Pendiente |
-| **06** | 06 Nov | **Vintage** | 🌍 Bio/Amb | ⭐ **Fantasmas de la biogeografía: Distribución histórica vs. actual de especies** | QGIS / R | [`day06`](./days/day06_vintage/) | ⏳ Pendiente |
+| **01** | 01 Nov | **Points** | 🦜 Aves | Endemismo alado en México (~110 especies endémicas) | R (`sf`, `ggplot2`) | [`day01`](./days/day01_points/) | ✅ Publicado |
+| **02** | 02 Nov | **Lines** | 🦜 Aves | Autopistas del cielo: Veracruz Río de Rapaces y el embudo migratorio de América | Python (`pandas`, `shapely`, `scipy`, `matplotlib`) | [`day02`](./days/day02_lines/) | ✅ Publicado |
+| **03** | 03 Nov | **Polygons** | 🇲🇽 México | El escudo verde de México: 223 ANP y presión antrópica | R (`sf`, `terra`, `ggplot2`) | [`day03`](./days/day03_polygons/) | ✅ Publicado |
+| **04** | 04 Nov | **Clusters** | 🌍 Bio/Amb | Clústeres de la megadiversidad: la zona más biodiversa de los 17 países más biodiversos | R (`sf`, `ggplot2`, `patchwork`, `cluster`) + GBIF API | [`day04`](./days/day04_clusters/) | ✅ Publicado |
+| **05** | 05 Nov | **Senses: Sight** | 🦜 Aves | Ecología del plumaje: Riqueza cromática e iridiscencia aviar en México | R (`terra`, `sf`, `ggplot2`, `patchwork`) + GBIF & BirdColorBase | [`day05`](./days/day05_senses_sight/) | ✅ Publicado |
+| **06** | 06 Nov | **Vintage** | 🌍 Bio/Amb | Cuatro naturalistas, cuatro rutas: Darwin, Humboldt, Wallace y Helia Bravo | R (`sf`, `ggplot2`, `patchwork`, `gifski`) + GBIF | [`day06`](./days/day06_vintage/) | ⏳ Pendiente |
 | **07** | 07 Nov | **10 minute map** | 🇲🇽 México | ¿Dónde tiembla en México? Densidad sísmica / Cenotes | Python (`leafmap`) | [`day07`](./days/day07_10_minute_map/) | ⏳ Pendiente |
 | **08** | 08 Nov | **Utopia** | 🌍 Bio/Amb | Planeta 30x30: Corredores biológicos y restauración ecológica | R (`terra`, `sf`) | [`day08`](./days/day08_utopia/) | ⏳ Pendiente |
 | **09** | 09 Nov | **Urban-rural** | 🇲🇽 México | La frontera que devora el bosque: Expansión metropolitana en México | R (`biscale`) | [`day09`](./days/day09_urban_rural/) | ⏳ Pendiente |
@@ -89,16 +89,25 @@ Repo30DayMapChallenge2026/
 ## 🖼️ Galería de Mapas
 
 ### Día 1
-#### CONSTELACIONES" DEL ENDEMISMO AVIAR EN MÉXICO
-![Día 1](outputs\gallery\day01_points_aves_endemicas.png)
+#### Constelaciones del endemismo aviar en México
+![Día 1](outputs/gallery/day01_points_aves_endemicas.png)
 
 ### Día 2
 #### Veracruz Río de Rapaces
-![Día 2](outputs\gallery\day03_polygons_anp_presion.png)
+![Día 2](outputs/gallery/day02_lines_veracruz_rio_rapaces.png)
 
-### Día 3 
+### Día 3
 #### Estado actual de las áreas protegidas de México
-![Día 3](outputs\gallery\day03_polygons_anp_presion.png)
+![Día 3](outputs/gallery/day03_polygons_anp_presion.png)
+
+### Día 4
+#### Centros de biodiversidad en los países megadiversos
+![Día 4](outputs/gallery/day04_clusters_megadiversidad.png)
+
+### Día 5
+#### Ecología del plumaje: riqueza cromática e iridiscencia aviar en México
+![Día 5](outputs/gallery/day05_senses_sight_plumaje.png)
+
 
 ---
 
