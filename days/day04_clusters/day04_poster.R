@@ -35,6 +35,48 @@ CL_COL <- c(
 )
 dat$cluster_lab <- factor(CL_LAB[as.character(dat$cluster)], levels = unname(CL_LAB))
 
+HOTSPOT_ES <- c(
+  "Atlantic Forest"                         = "Bosque Atlántico",
+  "California Floristic Province"           = "Provincia florística de California",
+  "Caribbean Islands"                       = "Islas del Caribe",
+  "Cerrado"                                 = "Cerrado",
+  "Coastal Forests of Eastern Africa"       = "Bosques costeros de África oriental",
+  "East Melanesian Islands"                 = "Melanesia oriental",
+  "Eastern Afromontane"                     = "Afromontano oriental",
+  "Forests of East Australia"               = "Bosques del E de Australia",
+  "Guinean Forests of West Africa"          = "Bosques guineanos de África occidental",
+  "Himalaya"                                = "Himalaya",
+  "Horn of Africa"                          = "Cuerno de África",
+  "Indo-Burma"                              = "Indo-Birmania",
+  "Irano-Anatolian"                         = "Irano-Anatolia",
+  "Japan"                                   = "Japón",
+  "Madagascar and the Indian Ocean Islands" = "Madagascar e islas",
+  "Madrean Pine-Oak Woodlands"              = "Bosques de pino-encino madreanos",
+  "Maputaland-Pondoland-Albany"             = "Maputaland-Pondoland",
+  "Mediterranean Basin"                     = "Cuenca del Mediterráneo",
+  "Mesoamerica"                             = "Mesoamérica",
+  "Mountains of Central Asia"               = "Montañas de Asia Central",
+  "Mountains of Southwest China"            = "Montañas del SO de China",
+  "New Caledonia"                           = "Nueva Caledonia",
+  "New Zealand"                             = "Nueva Zelanda",
+  "North American Coastal Plain"            = "Llanura costera norteamericana",
+  "Philippines"                             = "Filipinas",
+  "Polynesia-Micronesia"                    = "Polinesia-Micronesia",
+  "Southwest Australia"                     = "SO de Australia",
+  "Succulent Karoo"                         = "Karoo suculento",
+  "Sundaland"                               = "Sondalandia",
+  "Tropical Andes"                          = "Andes tropicales",
+  "Tumbes-Choco-Magdalena"                  = "Tumbes-Chocó-Magdalena",
+  "Wallacea"                                = "Wallacea",
+  "Western Ghats and Sri Lanka"             = "Ghats occidentales y Sri Lanka",
+  "Cape Floristic Region"                   = "Región florística del Cabo",
+  "Chilean Winter Rainfall and Valdivian Forests" = "Bosques valdivianos",
+  "Caucasus"                                = "Cáucaso"
+)
+dat$hotspot_es <- ifelse(dat$hotspot %in% names(HOTSPOT_ES),
+                         unname(HOTSPOT_ES[dat$hotspot]),
+                         dat$hotspot)
+
 MOLL <- "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"
 world <- st_read("data/raw/day04/ne_50m_admin_0_countries.geojson", quiet = TRUE) |>
   st_make_valid() |> select(iso3 = ISO_A3)
@@ -57,10 +99,11 @@ top_all <- dat |> filter(!is.na(n_especies)) |> slice_max(n_especies, n = 1)
 top3 <- dat |> filter(!is.na(n_especies)) |> slice_max(n_especies, n = 3)
 nota_mapa <- paste0(
   "Fragmentos más ricos:\n",
-  paste(sprintf("%s (%s) · %s spp.", top3$hotspot, top3$pais_es, comma(top3$n_especies)),
+  paste(sprintf("%s (%s) · %s esp.", top3$hotspot_es, top3$pais_es,
+                comma(top3$n_especies, big.mark = " ")),
         collapse = "\n")
 )
-nota_xy <- data.frame(X = -1.66e7, Y = 2.4e6)
+nota_xy <- data.frame(X = -1.73e7, Y = -4.6e6)
 
 # ============================== A. mapa mundial ===============================
 pA <- ggplot() +
@@ -88,7 +131,7 @@ pA <- ggplot() +
   labs(
     title = "Clústeres de la megadiversidad",
     subtitle = paste0(
-      "La avifauna agrupa los fragmentos de hotspot de los 17 países\n",
+      "La avifauna agrupa los fragmentos de regiones prioritarias de los 17 países\n",
       "megadiversos en seis clústeres biogeográficos"
     )
   )
@@ -102,7 +145,8 @@ pB <- ggplot(d_b, aes(area_frag_km2, n_especies)) +
   geom_point(aes(fill = cluster_lab), shape = 21, size = 2.8, color = "#162235",
              stroke = 0.3, alpha = 0.93) +
   geom_text_repel(data = d_b |> slice_max(n_especies, n = 3),
-                  aes(label = hotspot), size = 2.2, color = INK, fontface = "italic",
+                  aes(label = sprintf("%s (%s)", hotspot_es, pais_es)),
+                  size = 2.2, color = INK, fontface = "italic",
                   min.segment.length = 0, segment.size = 0.2, segment.color = SLATE,
                   box.padding = 0.3, max.overlaps = 20, nudge_y = 0.14) +
   scale_x_log10(breaks = c(1e4, 1e5, 1e6),
@@ -112,10 +156,11 @@ pB <- ggplot(d_b, aes(area_frag_km2, n_especies)) +
   scale_fill_manual(values = CL_COL, guide = "none") +
   annotation_logticks(sides = "lb", size = 0.22, color = SLATE) +
   labs(
-    x = "Superficie del fragmento (km², log)",
-    y = "Especies de aves (log)",
+    x = "Superficie del fragmento (km², escala log)",
+    y = "Especies de aves (escala log)",
     title = "La riqueza no es sólo tamaño",
-    subtitle = sprintf("Un punto por fragmento · R² = %.2f (log-log)", r2)
+    subtitle = sprintf("Un punto por fragmento · R² = %s (log-log)",
+                       sub("\\.", ",", sprintf("%.2f", r2)))
   ) +
   theme_map2026(base_size = 9.5) +
   theme(
@@ -146,8 +191,8 @@ pC <- ggplot(cob2, aes(pct_hotspot, pais_es)) +
   scale_fill_manual(values = CL_COL, guide = "none", na.value = "#A9B0BA") +
   scale_x_continuous(expand = expansion(mult = c(0, 0.10)), limits = c(0, 105)) +
   labs(
-    x = "% del territorio nacional dentro de un hotspot", y = NULL,
-    title = "¿Cuánto país es hotspot?",
+    x = "% del territorio nacional en regiones prioritarias", y = NULL,
+    title = "¿Cuánto país es región crítica?",
     subtitle = "Malasia, Filipinas y Madagascar caben enteros"
   ) +
   theme_map2026(base_size = 9.5) +
@@ -169,18 +214,7 @@ top_pais <- dat |>
   ungroup() |>
   arrange(n_especies) |>
   mutate(pais_es = factor(pais_es, levels = pais_es),
-         hotspot_corto = case_when(
-           hotspot == "North American Coastal Plain"    ~ "Costa atlántica de EE. UU.",
-           hotspot == "Madagascar and the Indian Ocean Islands" ~ "Madagascar e islas",
-           hotspot == "Maputaland-Pondoland-Albany"     ~ "Maputaland-Pondoland",
-           hotspot == "Mountains of Southwest China"    ~ "Montañas del SO de China",
-           hotspot == "Tropical Andes"                  ~ "Andes tropicales",
-           hotspot == "Tumbes-Choco-Magdalena"          ~ "Tumbes-Chocó",
-           hotspot == "California Floristic Province"   ~ "California",
-           hotspot == "East Melanesian Islands"         ~ "Melanesia oriental",
-           hotspot == "Forests of East Australia"       ~ "Bosques del E de Australia",
-           TRUE ~ hotspot
-         ))
+         hotspot_corto = hotspot_es)
 X_TXT <- 2350
 
 pD <- ggplot(top_pais, aes(y = pais_es)) +
@@ -219,10 +253,10 @@ poster <- (col_izq | col_der) +
   plot_layout(widths = c(1.62, 1)) +
   plot_annotation(
     caption = map_caption(
-      4, "Clusters",
-      paste0("Conservation International / CEPF (hotspots 2016), GBIF Occurrence API (Aves) y Natural Earth 1:50m.\n",
-             "Riqueza = especies distintas con registro georreferenciado en cada fragmento hotspot-país (n = 40); ",
-             "filtro: taxón Aves, coordenadas válidas, estado PRESENT.")
+      4, "Clústeres (Clusters)",
+      paste0("Conservation International / CEPF (regiones críticas de biodiversidad 2016), API de registros de GBIF (Aves) y Natural Earth 1:50m.\n",
+             "Riqueza = especies distintas con registro georreferenciado en cada fragmento región-país (n = 40); ",
+             "filtro: taxón Aves, coordenadas válidas, estado PRESENTE.")
     ),
     theme = theme(
       plot.background = element_rect(fill = CREAM, color = NA),
