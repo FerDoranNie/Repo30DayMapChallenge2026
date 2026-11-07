@@ -108,6 +108,9 @@ Repo30DayMapChallenge2026/
 #### Ecología del plumaje: riqueza cromática e iridiscencia aviar en México
 ![Día 5](outputs/gallery/day05_senses_sight_plumaje.png)
 
+### Día 6
+#### ¿Cómo fue el viaje de 4 grandes naturalistas/científicos que cambiaron la visión de la naturaleza en el mundo?
+![Día 6](outputs\gallery\day06_naturalistas_facetas.gif) 
 
 ---
 

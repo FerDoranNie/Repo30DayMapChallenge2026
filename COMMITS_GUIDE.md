@@ -92,8 +92,8 @@ git push
 
 ### Día 06 — Vintage (06 de noviembre)
 ```powershell
-git add days/day06_vintage/ outputs/gallery/day06_vintage_historical_species.png README.md
-git commit -m "feat(day06): add Day 06 Vintage map - Historical vs current species distribution"
+git add days/day06_vintage/ outputs/gallery/day06_naturalistas_facetas.gif README.md
+git commit -m "Añadiendo Día 6 ¿Cómo fue el viaje de 4 grandes naturalistas/científicos que cambiaron la visión de la naturaleza en el mundo?"
 git push
 ```
 
