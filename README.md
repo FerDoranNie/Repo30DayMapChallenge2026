@@ -36,14 +36,14 @@ En esta edición los 30 mapas giran alrededor de cuatro grandes líneas de inves
 | **03** | 03 Nov | **Polygons** | 🇲🇽 México | El escudo verde de México: 223 ANP y presión antrópica | R (`sf`, `terra`, `ggplot2`) | [`day03`](./days/day03_polygons/) | ✅ Publicado |
 | **04** | 04 Nov | **Clusters** | 🌍 Bio/Amb | Clústeres de la megadiversidad: la zona más biodiversa de los 17 países más biodiversos | R (`sf`, `ggplot2`, `patchwork`, `cluster`) + GBIF API | [`day04`](./days/day04_clusters/) | ✅ Publicado |
 | **05** | 05 Nov | **Senses: Sight** | 🦜 Aves | Ecología del plumaje: Riqueza cromática e iridiscencia aviar en México | R (`terra`, `sf`, `ggplot2`, `patchwork`) + GBIF & BirdColorBase | [`day05`](./days/day05_senses_sight/) | ✅ Publicado |
-| **06** | 06 Nov | **Vintage** | 🌍 Bio/Amb | Cuatro naturalistas, cuatro rutas: Darwin, Humboldt, Wallace y Helia Bravo | R (`sf`, `ggplot2`, `patchwork`, `gifski`) + GBIF | [`day06`](./days/day06_vintage/) | ⏳ Pendiente |
-| **07** | 07 Nov | **10 minute map** | 🇲🇽 México | ¿Dónde tiembla en México? Densidad sísmica / Cenotes | Python (`leafmap`) | [`day07`](./days/day07_10_minute_map/) | ⏳ Pendiente |
-| **08** | 08 Nov | **Utopia** | 🌍 Bio/Amb | Planeta 30x30: Corredores biológicos y restauración ecológica | R (`terra`, `sf`) | [`day08`](./days/day08_utopia/) | ⏳ Pendiente |
-| **09** | 09 Nov | **Urban-rural** | 🇲🇽 México | La frontera que devora el bosque: Expansión metropolitana en México | R (`biscale`) | [`day09`](./days/day09_urban_rural/) | ⏳ Pendiente |
-| **10** | 10 Nov | **Prompting only** | 💡 Curioso | Geografía de los topónimos de fauna y flora en localidades de México | R / Python | [`day10`](./days/day10_prompting_only/) | ⏳ Pendiente |
-| **11** | 11 Nov | **Senses: Sound** | 🦜 Aves | El paisaje sonoro del amanecer: Cantos de aves (Xeno-canto) | Web (`Leaflet` / `Quarto`) | [`day11`](./days/day11_senses_sound/) | ⏳ Pendiente |
-| **12** | 12 Nov | **Power** | 🇲🇽 México | ⭐ **¿El Poniente siempre es más rico? Geografía socioeconómica en ciudades mexicanas** | R (`sf`, `ggplot2`) / Web | [`day12`](./days/day12_power/) | ⏳ Pendiente |
-| **13** | 13 Nov | **Interactions** | 🌍 Bio/Amb | Redes de interacción biológica / Comercio global de fauna silvestre | Deck.gl / R (`ggraph`) | [`day13`](./days/day13_interactions/) | ⏳ Pendiente |
+| **06** | 06 Nov | **Vintage** | 🌍 Bio/Amb | Cuatro naturalistas, cuatro rutas: Darwin, Humboldt, Wallace y Helia Bravo | R (`sf`, `ggplot2`, `patchwork`, `gifski`) + GBIF | [`day06`](./days/day06_vintage/) | ✅ Publicado |
+| **07** | 07 Nov | **10 minute map** | 🇲🇽 México | Los primeros 10 minutos del Cenozoico: Chicxulub y el Anillo de Cenotes (11,878 cenotes y cavernas) | R (`sf`, `terra`, `ggplot2`, `patchwork`) | [`day07`](./days/day07_10_minute_map/) | ✅ Publicado |
+| **08** | 08 Nov | **Utopia** | 🌍 Bio/Amb | Planeta 30×30: una utopía posible — Ecorregiones y megacorredores biológicos | R (`sf`, `ggplot2`, `patchwork`) | [`day08`](./days/day08_utopia/) | ✅ Publicado |
+| **09** | 09 Nov | **Urban-rural** | 🇲🇽 México | La frontera que devora el bosque: 50 años de expansión metropolitana en México | R (`terra`, `sf`, `biscale`, `patchwork`, `gifski`, `av`) | [`day09`](./days/day09_urban_rural/) | ✅ Publicado |
+| **10** | 10 Nov | **Prompting only** | 💡 Curioso | El Bestiario y Herbario Toponímico de México (16,667 localidades clasificadas) | R (`sf`, `ggplot2`, `patchwork`, `stringi`) | [`day10`](./days/day10_prompting_only/) | ✅ Publicado |
+| **11** | 11 Nov | **Senses: Sound** | 🦜 Aves | El coro del amanecer en México: La ola acústica de las aves del Caribe al Pacífico (38,353 grabaciones) | R (`sf`, `terra`, `ggplot2`, `patchwork`, `gifski`, `av`) + GBIF Sound | [`day11`](./days/day11_senses_sound/) | ✅ Publicado |
+| **12** | 12 Nov | **Power** | 🇲🇽 México | ⭐ **¿El Poniente siempre es más rico? Geografía socioeconómica en ciudades mexicanas** | R (`sf`, `ggplot2`, `patchwork`) | [`day12`](./days/day12_power/) | ⏳ Pendiente |
+| **13** | 13 Nov | **Interactions** | 🌍 Bio/Amb | La red global de comercio de vida silvestre (CITES): Rutas y presión taxonómica | R (`sf`, `igraph`, `ggplot2`, `gifski`) | [`day13`](./days/day13_interactions/) | ⏳ Pendiente |
 | **14** | 14 Nov | **Borgesian map** | 💡 Curioso | El Aleph de las Ecorregiones: Mapa caligráfico con nombres científicos | R / Python | [`day14`](./days/day14_borgesian_map/) | ⏳ Pendiente |
 | **15** | 15 Nov | **Inside out** | 🇲🇽 México | El Valle de México invertido: Topografía, cuenca lacustre y hundimiento | R (`rayshader`) | [`day15`](./days/day15_inside_out/) | ⏳ Pendiente |
 | **16** | 16 Nov | **Collaborative map** | 🦜 Aves | El poder de la ciencia ciudadana: Naturalista y eBird en México | Python (`datashader`) | [`day16`](./days/day16_collaborative_map/) | ⏳ Pendiente |
@@ -110,7 +110,20 @@ Repo30DayMapChallenge2026/
 
 ### Día 6
 #### ¿Cómo fue el viaje de 4 grandes naturalistas/científicos que cambiaron la visión de la naturaleza en el mundo?
-![Día 6](outputs\gallery\day06_naturalistas_facetas.gif) 
+![Día 6](outputs/gallery/day06_naturalistas_facetas.gif)
+
+**Versión MP4:** [Cuatro facetas](outputs/gallery/day06_naturalistas_facetas.mp4) · [Darwin](outputs/gallery/day06_darwin.mp4) · [Humboldt](outputs/gallery/day06_humboldt.mp4) · [Humboldt en Nueva España](outputs/gallery/day06_humboldt_mexico.mp4) · [Wallace](outputs/gallery/day06_wallace.mp4) · [Bravo](outputs/gallery/day06_bravo.mp4)
+
+### Día 7
+#### Los primeros 10 minutos del Cenozoico: Chicxulub y el Anillo de Cenotes
+![Día 7](outputs/gallery/day07_10_minute_map_chicxulub_cenotes.png)
+
+### Día 8
+#### Planeta 30×30: una utopía posible — ecorregiones y megacorredores biológicos
+![Día 8](outputs/gallery/day08_utopia_planeta_30x30.png)
+
+**Versión México:** [México 30×30](outputs/gallery/day08_utopia_mexico.png)
+
 
 ---
 
