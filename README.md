@@ -134,6 +134,18 @@ Repo30DayMapChallenge2026/
 
 **Versión Atlas con pequeños múltiplos:** [Ver póster con múltiplos por taxón](outputs/gallery/day10_prompting_only_toponimos.png)
 
+### Día 11
+#### ¿Cómo es el panorama acústico de la avifauna en México?
+![Día 11](outputs\high_res\day11_senses_sound_coro_amanecer.png)
+
+### Día 12
+#### ¿El Poniente siempre es más rico? Geografía cardinal del poder socioeconómico en México
+![Día 12](outputs/gallery/day12_power_poniente_rico.png)
+
+**Tour metropolitano escena a escena:** [Ver animación GIF](outputs/gallery/day12_power_ciudades_tour.gif) · [Ver video MP4](outputs/gallery/day12_power_ciudades_tour.mp4)
+
+
+
 ### Día 13
 #### ¿Hacia dónde drena la biodiversidad del planeta? El comercio mundial de vida silvestre (CITES, 2015–2024)
 ![Día 13](outputs/gallery/day13_interactions_cites_fauna.png)
@@ -164,11 +176,6 @@ Repo30DayMapChallenge2026/
 #### Trampas de luz: la migración nocturna del Golfo de México frente al resplandor de las ciudades
 ![Día 17](outputs/gallery/day17_light_and_dark_trampas_de_luz.png)
 
-### Día 12
-#### ¿El Poniente siempre es más rico? Geografía cardinal del poder socioeconómico en México
-![Día 12](outputs/gallery/day12_power_poniente_rico.png)
-
-**Tour metropolitano escena a escena:** [Ver animación GIF](outputs/gallery/day12_power_ciudades_tour.gif) · [Ver video MP4](outputs/gallery/day12_power_ciudades_tour.mp4)
 
 ### Día 19
 #### ¿A qué huele la Ciudad de México? El paisaje olfativo urbano
