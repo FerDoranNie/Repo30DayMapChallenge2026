@@ -42,15 +42,15 @@ En esta edición los 30 mapas giran alrededor de cuatro grandes líneas de inves
 | **09** | 09 Nov | **Urban-rural** | 🇲🇽 México | La frontera que devora el bosque: 50 años de expansión metropolitana en México | R (`terra`, `sf`, `biscale`, `patchwork`, `gifski`, `av`) | [`day09`](./days/day09_urban_rural/) | ✅ Publicado |
 | **10** | 10 Nov | **Prompting only** | 💡 Curioso | El Bestiario y Herbario Toponímico de México (16,667 localidades clasificadas) | R (`sf`, `ggplot2`, `patchwork`, `stringi`) | [`day10`](./days/day10_prompting_only/) | ✅ Publicado |
 | **11** | 11 Nov | **Senses: Sound** | 🦜 Aves | El coro del amanecer en México: La ola acústica de las aves del Caribe al Pacífico (38,353 grabaciones) | R (`sf`, `terra`, `ggplot2`, `patchwork`, `gifski`, `av`) + GBIF Sound | [`day11`](./days/day11_senses_sound/) | ✅ Publicado |
-| **12** | 12 Nov | **Power** | 🇲🇽 México | ⭐ **¿El Poniente siempre es más rico? Geografía socioeconómica en ciudades mexicanas** | R (`sf`, `ggplot2`, `patchwork`) | [`day12`](./days/day12_power/) | ⏳ Pendiente |
-| **13** | 13 Nov | **Interactions** | 🌍 Bio/Amb | La red global de comercio de vida silvestre (CITES): Rutas y presión taxonómica | R (`sf`, `igraph`, `ggplot2`, `gifski`) | [`day13`](./days/day13_interactions/) | ⏳ Pendiente |
-| **14** | 14 Nov | **Borgesian map** | 💡 Curioso | El Aleph de las Ecorregiones: Mapa caligráfico con nombres científicos | R / Python | [`day14`](./days/day14_borgesian_map/) | ⏳ Pendiente |
-| **15** | 15 Nov | **Inside out** | 🇲🇽 México | El Valle de México invertido: Topografía, cuenca lacustre y hundimiento | R (`rayshader`) | [`day15`](./days/day15_inside_out/) | ⏳ Pendiente |
-| **16** | 16 Nov | **Collaborative map** | 🦜 Aves | El poder de la ciencia ciudadana: Naturalista y eBird en México | Python (`datashader`) | [`day16`](./days/day16_collaborative_map/) | ⏳ Pendiente |
-| **17** | 17 Nov | **Light & dark** | 🦜 Aves | Trampas de luz en la noche: Contaminación lumínica vs. migración nocturna | R (`terra`, `ggplot2`) | [`day17`](./days/day17_light_and_dark/) | ⏳ Pendiente |
-| **18** | 18 Nov | **NULL** | 🌍 Bio/Amb | Terra Incognita Biológica: Vacíos de muestreo (`NULL` en GBIF) | Python / R | [`day18`](./days/day18_null/) | ⏳ Pendiente |
-| **19** | 19 Nov | **Senses: Smell** | 🇲🇽 México | ¿A qué huele la ciudad? Paisaje olfativo urbano (emisiones vs. panaderías/taquerías) | R (`sf`, `ggplot2`) | [`day19`](./days/day19_senses_smell/) | ⏳ Pendiente |
-| **20** | 20 Nov | **Hexagons** | 🌍 Bio/Amb | Mosaico H3 de crisis y vida: Deforestación vs. riqueza de especies | Python (`h3`, `pydeck`) | [`day20`](./days/day20_hexagons/) | ⏳ Pendiente |
+| **12** | 12 Nov | **Power** | 🇲🇽 México | ⭐ **¿El Poniente siempre es más rico? Geografía cardinal del poder socioeconómico en 11 metrópolis** | R (`sf`, `ggplot2`, `patchwork`, `gifski`, `av`, `data.table`) | [`day12`](./days/day12_power/) | ✅ Publicado |
+| **13** | 13 Nov | **Interactions** | 🌍 Bio/Amb | ⭐ **¿Hacia dónde drena la biodiversidad? La red global del comercio de vida silvestre (CITES)** | R (`sf`, `data.table`, `ggplot2`, `patchwork`, `gifski`, `av`) | [`day13`](./days/day13_interactions/) | ✅ Publicado |
+| **14** | 14 Nov | **Borgesian map** | 💡 Curioso | El Aleph de las Ecorregiones: Mapa caligráfico con nombres científicos | Python (`shapely`, `Pillow`, `numpy`) + GBIF API | [`day14`](./days/day14_borgesian_map/) | ✅ Publicado |
+| **15** | 15 Nov | **Inside out** | 🇲🇽 México | El Valle de México al revés: topografía invertida y vaso lacustre | R (`terra`, `sf`, `ragg`) | [`day15`](./days/day15_inside_out/) | ✅ Publicado |
+| **16** | 16 Nov | **Collaborative map** | 🦜 Aves | El pulso de la ciencia ciudadana: eBird y Naturalista en México (18.19 M registros) | Python (`numpy`, `scipy`, `shapely`, `matplotlib`) | [`day16`](./days/day16_collaborative_map/) | ✅ Publicado |
+| **17** | 17 Nov | **Light & dark** | 🦜 Aves | ⭐ **Trampas de luz: la migración nocturna del Golfo frente al resplandor de las ciudades** (45 especies, 2.23 M registros) | Python (`numpy`, `pandas`, `scipy`, `Pillow`, `matplotlib`) + NASA GIBS & GBIF | [`day17`](./days/day17_light_and_dark/) | ✅ Publicado |
+| **18** | 18 Nov | **NULL** | 🌍 Bio/Amb | Terra Incognita Biológica: Vacíos de muestreo (`NULL` en GBIF) en zonas de alta vegetación | R (`terra`, `sf`, `ggplot2`, `patchwork`) + Python (`requests`) | [`day18`](./days/day18_null/) | ✅ Publicado |
+| **19** | 19 Nov | **Senses: Smell** | 🇲🇽 México | ¿A qué huele la Ciudad de México? Paisaje olfativo urbano (50,152 comercios DENUE vs. 940.6 t COVs RETC 2024) | R (`sf`, `data.table`, `ggplot2`, `patchwork`, `ragg`) + Python | [`day19`](./days/day19_senses_smell/) | ✅ Publicado |
+| **20** | 20 Nov | **Hexagons** | 🌍 Bio/Amb | ⭐ **El mosaico de la crisis y la vida: riqueza de vertebrados vs. huella de pérdida de cobertura arbórea en 11,854 hexágonos H3** | Python (`h3`, `rasterio`, `matplotlib`) + Map of Life & WRI/Google DeepMind | [`day20`](./days/day20_hexagons/) | ✅ Publicado |
 | **21** | 21 Nov | **OpenStreetMap** | 🇲🇽 México | Oasis urbanos: Accesibilidad peatonal a áreas verdes en ciudades de México | Python (`osmnx`) | [`day21`](./days/day21_openstreetmap/) | ⏳ Pendiente |
 | **22** | 22 Nov | **Projections** | 🦜 Aves | El mundo visto por el Charrán Ártico (*Sterna paradisaea*) de polo a polo | R (`sf`) | [`day22`](./days/day22_projections/) | ⏳ Pendiente |
 | **23** | 23 Nov | **Senses: Taste** | 🇲🇽 México | Centro Vavilov: Razas nativas de maíz, chiles, cacao y Denominaciones de Origen | R / QGIS | [`day23`](./days/day23_senses_taste/) | ⏳ Pendiente |
@@ -123,6 +123,62 @@ Repo30DayMapChallenge2026/
 ![Día 8](outputs/gallery/day08_utopia_planeta_30x30.png)
 
 **Versión México:** [México 30×30](outputs/gallery/day08_utopia_mexico.png)
+
+### Día 9
+#### La frontera que devora el bosque: 50 años de expansión metropolitana en México
+![Día 9](outputs/gallery/day09_urban_rural_frontera_bosque.png)
+
+### Día 10
+#### El Bestiario y Herbario Toponímico de México: Geografía de la fauna y flora en los nombres de ~300,000 localidades
+![Día 10 - Versión Detalle](outputs/gallery/day10_prompting_only_detalle.png)
+
+**Versión Atlas con pequeños múltiplos:** [Ver póster con múltiplos por taxón](outputs/gallery/day10_prompting_only_toponimos.png)
+
+### Día 13
+#### ¿Hacia dónde drena la biodiversidad del planeta? El comercio mundial de vida silvestre (CITES, 2015–2024)
+![Día 13](outputs/gallery/day13_interactions_cites_fauna.png)
+
+**Animación de flujos:** [GIF](outputs/gallery/day13_interactions_cites_flujos.gif) · [MP4](outputs/gallery/day13_interactions_cites_flujos.mp4) · **Video del póster (45 s):** [MP4](outputs/gallery/day13_interactions_cites_video.mp4)
+
+### Día 14
+#### El Aleph de las Ecorregiones: Mapa caligráfico de México formado por nombres científicos
+![Día 14](outputs/gallery/day14_borgesian_map_aleph.png)
+
+### Día 15
+#### El Valle de México al revés: la cuenca que fue lago es hoy la cumbre de su mapa
+![Día 15](outputs/gallery/day15_inside_out_valle_invertido.png)
+
+**Variante de comparación:** [el mismo valle sin invertir](outputs/gallery/day15_inside_out_valle_derecho.png)
+
+**Serie metropolitana (video de 40 s):** [Cuatro ciudades al revés](outputs/gallery/day15_serie_4ciudades.mp4) — [Monterrey](outputs/gallery/day15_serie_mty.png) · [Guadalajara](outputs/gallery/day15_serie_gdl.png) · [Puebla](outputs/gallery/day15_serie_pue.png) · [Valle de México](outputs/gallery/day15_serie_cdmx.png)
+
+### Día 16
+#### El pulso de la ciencia ciudadana: eBird y Naturalista en México
+![Día 16](outputs/gallery/day16_collaborative_map_ciencia_ciudadana.png)
+
+### Día 18
+#### Terra Incognita Biológica: El mapa del NULL (vacíos de GBIF en zonas de alta vegetación)
+![Día 18](outputs/gallery/day18_null_terra_incognita.png)
+
+### Día 17
+#### Trampas de luz: la migración nocturna del Golfo de México frente al resplandor de las ciudades
+![Día 17](outputs/gallery/day17_light_and_dark_trampas_de_luz.png)
+
+### Día 12
+#### ¿El Poniente siempre es más rico? Geografía cardinal del poder socioeconómico en México
+![Día 12](outputs/gallery/day12_power_poniente_rico.png)
+
+**Tour metropolitano escena a escena:** [Ver animación GIF](outputs/gallery/day12_power_ciudades_tour.gif) · [Ver video MP4](outputs/gallery/day12_power_ciudades_tour.mp4)
+
+### Día 19
+#### ¿A qué huele la Ciudad de México? El paisaje olfativo urbano
+![Día 19](outputs/gallery/day19_senses_smell_paisaje_olfativo.png)
+
+### Día 20
+#### El mosaico de la crisis y la vida: riqueza de vertebrados y huella de pérdida de cobertura arbórea
+![Día 20](outputs/gallery/day20_hexagons_crisis_y_vida.png)
+
+*11,854 hexágonos H3 · 48% de la tierra de alta riqueza ya muestra huella de pérdida · 1,623 hexágonos en el frente crítico*
 
 
 ---
